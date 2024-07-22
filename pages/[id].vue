@@ -9,9 +9,9 @@
         <div class="w-full px-5 md:px-6 py-6 lg:w-[1000px] xl:w-[1240px] 2xl:w-[1520px]">
           <div class="flex gap-4 justify-center lg:justify-end">
   
-            <NavButton @click="scrollTo(description)">Description</NavButton>
-            <NavButton @click="scrollTo(myRole)">My Role</NavButton>
-            <NavButton @click="scrollTo(contacts)">Contacts</NavButton>
+            <UiNavButton @click="scrollTo(description)">Description</UiNavButton>
+            <UiNavButton @click="scrollTo(myRole)">My Role</UiNavButton>
+            <UiNavButton @click="scrollTo(contacts)">Contacts</UiNavButton>
             <RouterLink class="text-[#F0BF6C] text-lg sm:text-xl" to="/">Back</RouterLink>
   
           </div>
@@ -31,10 +31,10 @@
   
   
   <script setup>
-  import DescriptionSection from '../components/DescriptionSection.vue'
-  import MyRoleSection from '../components/MyRoleSection.vue'
-  import ContactsSection from '../components/ContactsSection.vue'
-  import NavButton from '../components/ui/NavButton.vue'
+//   import DescriptionSection from '../components/DescriptionSection.vue'
+//   import MyRoleSection from '../components/MyRoleSection.vue'
+//   import ContactsSection from '../components/ContactsSection.vue'
+//   import NavButton from '../components/ui/NavButton.vue'
   
   import { ref, onBeforeMount } from 'vue';
   import { useFetch } from '@/composables/useFetch';

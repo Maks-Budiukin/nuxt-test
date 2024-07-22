@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="max-w-[600px] 2xl:max-w-[728px] mb-6">
-                        <ReadMore>
+                        <UiReadMore>
                             Experienced frontend developer proficient in a wide array
                             of technologies
                             including Vue3, React, Redux, Nuxt.js, Express, NestJS, and Pinia. Skilled in
@@ -59,7 +59,7 @@
                             growth, I am passionate about leveraging my diverse skill set to drive
                             innovation and deliver exceptional results in collaborative team
                             environments.
-                        </ReadMore>
+                        </UiReadMore>
                     </div>
 
                     <div class="flex flex-col md:flex-row gap-3">
@@ -71,8 +71,8 @@
                         </div>
 
                         <div class="md:w-[200px]">
-                            <Button variant="secondary" @click="scrollToBottom">Contact
-                                me</Button>
+                            <UiButton variant="secondary" @click="scrollToBottom">Contact
+                                me</UiButton>
                         </div>
                     </div>
                 </div>
@@ -125,12 +125,12 @@
 </template>
 
 <script setup>
-import Button from './ui/Button.vue'
+// import Button from './ui/Button.vue'
 import Telegram from './icons/Telegram.vue'
 import Github from './icons/Github.vue'
 import Gitlab from './icons/Gitlab.vue'
 import LinkedIn from './icons/LinkedIn.vue'
-import ReadMore from './ui/ReadMore.vue'
+// import ReadMore from './ui/ReadMore.vue'
 import { ref, watch, onMounted, onUnmounted } from 'vue'
 
 const minLg = ref(false)

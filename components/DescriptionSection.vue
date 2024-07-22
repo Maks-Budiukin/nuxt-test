@@ -13,7 +13,7 @@
 
                         <div
                             class="flex-1 flex justify-center items-center max-w-full md:max-w-[75%] lg:max-w-[50%] lg:order-1">
-                            <CarouselSection :data="pageGallery" />
+                            <UiCarousel :data="pageGallery" />
                         </div>
 
                         <div class="flex-1 flex flex-col gap-8 sm:items-center lg:items-start">
@@ -21,34 +21,34 @@
                                 <h1 class="font-semibold text-6xl sm:text-7xl text-white text-center lg:text-left">
                                     {{ pageHeader }}</h1>
                             </div>
-                            <ReadMore>
+                            <UiReadMore>
                                 {{ pageDescription }}
-                            </ReadMore>
+                            </UiReadMore>
                             <div class="sm:flex flex-col items-center lg:items-start sm:w-[412px]">
                                 <div v-if="linkLive" class="w-full mb-3">
-                                    <Button @click="navigate(linkLive)">
+                                    <UiButton @click="navigate(linkLive)">
                                         <span class="mr-2">
                                             <Web size="22" />
                                         </span>
-                                        Visit Live</Button>
+                                        Visit Live</UiButton>
                                 </div>
                                 <div
                                     class="w-full flex flex-col sm:flex-row gap-3 justify-center md:items-center lg:justify-start ">
                                     <div v-if="linkFE" class="flex-1">
-                                        <Button variant="secondary" @click="navigate(linkFE)">
+                                        <UiButton variant="secondary" @click="navigate(linkFE)">
                                             <span class="mr-2">
                                                 <Github size="22" />
                                             </span>
-                                            Frontend</Button>
+                                            Frontend</UiButton>
                                     </div>
 
                                     <div v-if="linkBE" class="flex-1">
-                                        <Button variant="secondary" @click="navigate(linkBE)">
+                                        <UiButton variant="secondary" @click="navigate(linkBE)">
                                             <span class="mr-2">
                                                 <Github size="22" />
                                             </span>
                                             Backend
-                                        </Button>
+                                        </UiButton>
                                     </div>
                                 </div>
                             </div>
@@ -62,9 +62,9 @@
 
 <script setup>
 import { computed } from 'vue'
-import CarouselSection from './ui/Carousel.vue'
-import Button from '../components/ui/Button.vue'
-import ReadMore from '../components/ui/ReadMore.vue'
+// import CarouselSection from './ui/Carousel.vue'
+// import Button from '../components/ui/Button.vue'
+// import ReadMore from '../components/ui/ReadMore.vue'
 import Github from './icons/Github.vue';
 import Web from './icons/Web.vue';
 

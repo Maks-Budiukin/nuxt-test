@@ -124,7 +124,7 @@
                     <div class="mt-4 flex justify-center items-center lg:justify-end">
                         <div class="w-[60%] lg:w-[200px]">
 
-                            <Button type="submit">Submit</Button>
+                            <UiButton type="submit">Submit</UiButton>
                         </div>
                     </div>
                 </form>
@@ -140,7 +140,7 @@
 import Telegram from './icons/Telegram.vue'
 import Email from './icons/Email.vue'
 import LinkedIn from './icons/LinkedIn.vue'
-import Button from './ui/Button.vue'
+// import Button from './ui/Button.vue'
 import { ref, computed } from 'vue'
 
 

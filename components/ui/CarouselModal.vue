@@ -1,9 +1,9 @@
 <template>
-    <DialogModal v-if="open" :open="open" @close="$emit('close')">
+    <UiDialogModal v-if="open" :open="open" @close="$emit('close')">
         <template #modal-content>
 
             <div class="relative w-full max-h-screen">
-                <ArrowButton :direction="'left'" shadow @click="onLeft" />
+                <UiArrowButton :direction="'left'" shadow @click="onLeft" />
 
                 <div class="flex justify-center ">
                     <Transition :name="transitionName" mode="out-in">
@@ -12,16 +12,16 @@
                     </Transition>
                 </div>
 
-                <ArrowButton shadow @click="onRight" />
+                <UiArrowButton shadow @click="onRight" />
                 <button class="color-[#FFFFFF] absolute right-3 top-3 z-[32]">X</button>
             </div>
         </template>
-    </DialogModal>
+    </UiDialogModal>
 </template>
 
 <script setup>
-import DialogModal from './DialogModal.vue'
-import ArrowButton from './ArrowButton.vue'
+// import DialogModal from './DialogModal.vue'
+// import UiArrowButton from './UiArrowButton.vue'
 import { ref } from 'vue'
 
 const props = defineProps({

@@ -7,7 +7,7 @@
             <div class="flex items-center">
                 <div class="mb-4 mx-auto relative">
 
-                    <ArrowButton :direction="'left'" size="32" shadow @click="onLeft" class="sm:hidden" />
+                    <UiArrowButton :direction="'left'" size="32" shadow @click="onLeft" class="sm:hidden" />
 
                     <div class="py-4 border-y-[2px] border-[#F0BF6C] sm:border-none">
                         <Transition :name="transitionName" mode="out-in">
@@ -19,14 +19,14 @@
 
                     </div>
 
-                    <ArrowButton size="32" shadow @click="onRight" class="sm:hidden" />
+                    <UiArrowButton size="32" shadow @click="onRight" class="sm:hidden" />
 
                 </div>
             </div>
 
             <div ref="carouselContainer" class="hidden sm:flex items-center min-h-[148px] relative px-12">
 
-                <ArrowButton :direction="'left'" size="24" @click="onLeft" />
+                <UiArrowButton :direction="'left'" size="24" @click="onLeft" />
 
                 <div ref="carousel" class="flex gap-2 overflow-x-scroll no-scrollbar ">
                     <div class="flex gap-[2px] items-center">
@@ -43,19 +43,19 @@
                     </div>
                 </div>
 
-                <ArrowButton size="24" @click="onRight" />
+                <UiArrowButton size="24" @click="onRight" />
 
             </div>
         </div>
-        <CarouselModal :open="open" @close="open = false" :images="images"
+        <UiCarouselModal :open="open" @close="open = false" :images="images"
             :currentImage="`https://test-strapi-mrqj.onrender.com${currentFullImage}`" v-model="currentImageIndex" />
     </div>
 </template>
 
 <script setup>
 import { ref, computed, watch, onUnmounted, nextTick } from 'vue';
-import CarouselModal from './CarouselModal.vue'
-import ArrowButton from './ArrowButton.vue';
+// import CarouselModal from './CarouselModal.vue'
+// import UiArrowButton from './UiArrowButton.vue';
 
 import { useWindowSize } from '@vueuse/core'
 import { VueSpinnerIos } from 'vue3-spinners';
