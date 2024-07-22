@@ -62,9 +62,6 @@
 
 <script setup>
 import { computed } from 'vue'
-// import CarouselSection from './ui/Carousel.vue'
-// import Button from '../components/ui/Button.vue'
-// import ReadMore from '../components/ui/ReadMore.vue'
 import Github from './icons/Github.vue';
 import Web from './icons/Web.vue';
 
@@ -72,11 +69,7 @@ const props = defineProps({
     data: {
         type: Object,
         required: true,
-    },
-    loading: {
-        type: Boolean,
-        default: false
-    }
+    }    
 })
 
 const navigate = (url) => {
@@ -84,27 +77,31 @@ const navigate = (url) => {
 }
 
 const pageHeader = computed(() => {
-    return props.data.attributes?.pageHeader
+    return props.data?.attributes?.pageHeader
 })
 
 const pageDescription = computed(() => {
-    return props.data.attributes?.pageDescription
+    return props.data?.attributes?.pageDescription
 })
 
 const pageGallery = computed(() => {
-    return props.data.attributes?.gallery.data || []
+    return props.data?.attributes?.gallery.data || []
+})
+
+onMounted(() => {
+    console.log(pageGallery.value)
 })
 
 const linkLive = computed(() => {
-    return props.data.attributes?.linkLive
+    return props.data?.attributes?.linkLive
 })
 
 const linkFE = computed(() => {
-    return props.data.attributes?.linkFE
+    return props.data?.attributes?.linkFE
 })
 
 const linkBE = computed(() => {
-    return props.data.attributes?.linkBE
+    return props.data?.attributes?.linkBE
 })
 
 </script>

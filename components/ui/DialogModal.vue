@@ -16,8 +16,6 @@
           <slot name="modal-content" />
         </div>
       </div>
-
-
     </transition>
 
   </Teleport>

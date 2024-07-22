@@ -23,7 +23,6 @@
 </template>
 
 <script setup>
-
 import { ref, watch, onMounted, onUnmounted } from 'vue'
 
 const skills = [
@@ -64,7 +63,7 @@ watch(screenWidth, (val) => {
     } else {
         minXl.value = false
     }
-})
+});
 
 </script>
 

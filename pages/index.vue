@@ -23,7 +23,7 @@
       </section>
   
       <section ref="portfolio" id="#portfolio" class="scroll-mt-12">
-        <PortfolioSection />
+          <PortfolioSection />
       </section>
   
       <section ref="skills" class="scroll-mt-12">
@@ -38,13 +38,7 @@
   
   
   <script setup>
-//   import HeroSection from '../components/HeroSection.vue'
-//   import ExperienceSection from '../components/ExperienceSection.vue'
-//   import SkillsSection from '../components/SkillsSection.vue'
-//   import PortfolioSection from '../components/PortfolioSection.vue'
-//   import ContactsSection from '../components/ContactsSection.vue'
-//   import NavButton from '../components/ui/NavButton.vue'
-  
+ 
   import { ref } from 'vue';
   
   const hero = ref(null);

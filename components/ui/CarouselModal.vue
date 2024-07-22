@@ -20,8 +20,6 @@
 </template>
 
 <script setup>
-// import DialogModal from './DialogModal.vue'
-// import UiArrowButton from './UiArrowButton.vue'
 import { ref } from 'vue'
 
 const props = defineProps({

@@ -26,7 +26,7 @@
 
                     <div class="flex flex-col gap-3">
                         <div>
-                            <a href="https://t.me/bud_maks" target="_blank"
+                            <NuxtLink to="https://t.me/bud_maks" target="_blank"
                                 class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] stroke-[#FFFFFF] hover:stroke-[#F0BF6C] duration-300">
                                 <div>
                                     <Telegram size="32" />
@@ -34,7 +34,7 @@
                                 <div>
                                     <p class="">Telegram</p>
                                 </div>
-                            </a>
+                            </NuxtLink>
                         </div>
 
                         <!-- <div>
@@ -62,7 +62,7 @@
                         </div> -->
 
                         <div>
-                            <a href="mailto:maks.budyukin@gmail.com" target="_blank"
+                            <NuxtLink to="mailto:maks.budyukin@gmail.com" target="_blank"
                                 class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] fill-[#FFFFFF] hover:fill-[#F0BF6C] duration-300">
                                 <div>
                                     <Email size="32" />
@@ -70,11 +70,11 @@
                                 <div>
                                     <p class="">Mail</p>
                                 </div>
-                            </a>
+                            </NuxtLink>
                         </div>
 
                         <div>
-                            <a href="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
+                            <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
                                 class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] fill-[#FFFFFF] hover:fill-[#F0BF6C] duration-300">
                                 <div>
                                     <LinkedIn size="32" />
@@ -82,7 +82,7 @@
                                 <div>
                                     <p class="">LinkedIn</p>
                                 </div>
-                            </a>
+                            </NuxtLink>
                         </div>
                     </div>
                 </div>
@@ -135,15 +135,10 @@
 </template>
 
 <script setup>
-// import Whatsapp from './icons/Whatsapp.vue'
-// import Viber from './icons/Viber.vue'
 import Telegram from './icons/Telegram.vue'
 import Email from './icons/Email.vue'
 import LinkedIn from './icons/LinkedIn.vue'
-// import Button from './ui/Button.vue'
 import { ref, computed } from 'vue'
-
-
 
 import { sendMessage } from '@/composables/sendMessage'
 

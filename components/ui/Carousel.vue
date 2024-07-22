@@ -1,9 +1,9 @@
 <template>
     <div class="h-full w-full">
-        <div class="h-full w-full flex justify-center items-center">
+        <!-- <div class="h-full w-full flex justify-center items-center">
             <VueSpinnerIos v-show="!isImageLoaded" color="#F0BF6C" size="40" />
-        </div>
-        <div v-show="!open && isImageLoaded" class="">
+        </div> -->
+        <div class="">
             <div class="flex items-center">
                 <div class="mb-4 mx-auto relative">
 
@@ -54,9 +54,6 @@
 
 <script setup>
 import { ref, computed, watch, onUnmounted, nextTick } from 'vue';
-// import CarouselModal from './CarouselModal.vue'
-// import UiArrowButton from './UiArrowButton.vue';
-
 import { useWindowSize } from '@vueuse/core'
 import { VueSpinnerIos } from 'vue3-spinners';
 

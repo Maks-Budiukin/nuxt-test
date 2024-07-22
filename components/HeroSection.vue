@@ -16,31 +16,31 @@
                         <div class="flex flex-col gap-3 md:px-5">
 
                             <div class="col-span-1">
-                                <a href="https://t.me/bud_maks" target="_blank"
+                                <NuxtLink to="https://t.me/bud_maks" target="_blank"
                                     class="stroke-white hover:stroke-[#F0BF6C] duration-300">
                                     <Telegram :size="minLg ? '48' : '64'" />
-                                </a>
+                                </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <a href="https://github.com/Maks-Budiukin" target="_blank"
+                                <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank"
                                     class="fill-white hover:fill-[#F0BF6C] duration-300">
                                     <Github :size="minLg ? '48' : '64'" />
-                                </a>
+                                </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <a href="https://gitlab.com/maksym-budyukin" target="_blank"
+                                <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank"
                                     class="stroke-white hover:stroke-[#F0BF6C] duration-300">
                                     <Gitlab :size="minLg ? '48' : '64'" />
-                                </a>
+                                </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <a href="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
+                                <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
                                     class="fill-white hover:fill-[#F0BF6C] duration-300">
                                     <LinkedIn :size="minLg ? '48' : '64'" />
-                                </a>
+                                </NuxtLink>
                             </div>
                         </div>
 
@@ -64,10 +64,10 @@
 
                     <div class="flex flex-col md:flex-row gap-3">
                         <div class="md:w-[200px]">
-                            <a href="/MAKSYM-BUDIUKIN.pdf" download="MAKSYM-BUDIUKIN.pdf"
+                            <NuxtLink to="/MAKSYM-BUDIUKIN.pdf" external download="MAKSYM-BUDIUKIN.pdf"
                                 class="flex items-center justify-center w-full text-xl font-medium border-[2px] border-transparent bg-[#F0BF6CCC] hover:bg-[#F0BF6C] duration-300 rounded-lg px-4 sm:px-6 py-2">
                                 Download CV
-                            </a>
+                            </NuxtLink>
                         </div>
 
                         <div class="md:w-[200px]">
@@ -89,31 +89,31 @@
                         </div>
 
                         <div class="col-span-1">
-                            <a href="https://t.me/bud_maks" target="_blank"
+                            <NuxtLink to="https://t.me/bud_maks" target="_blank"
                                 class="stroke-white hover:stroke-[#F0BF6C] duration-300">
                                 <Telegram :size="minLg ? '48' : '36'" />
-                            </a>
+                            </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <a href="https://github.com/Maks-Budiukin" target="_blank"
+                            <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank"
                                 class="fill-white hover:fill-[#F0BF6C] duration-300">
                                 <Github :size="minLg ? '48' : '36'" />
-                            </a>
+                            </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <a href="https://gitlab.com/maksym-budyukin" target="_blank"
+                            <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank"
                                 class="stroke-white hover:stroke-[#F0BF6C] duration-300">
                                 <Gitlab :size="minLg ? '48' : '36'" />
-                            </a>
+                            </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <a href="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
+                            <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
                                 class="fill-white hover:fill-[#F0BF6C] duration-300">
                                 <LinkedIn :size="minLg ? '48' : '36'" />
-                            </a>
+                            </NuxtLink>
                         </div>
                     </div>
                 </div>
@@ -125,12 +125,10 @@
 </template>
 
 <script setup>
-// import Button from './ui/Button.vue'
 import Telegram from './icons/Telegram.vue'
 import Github from './icons/Github.vue'
 import Gitlab from './icons/Gitlab.vue'
 import LinkedIn from './icons/LinkedIn.vue'
-// import ReadMore from './ui/ReadMore.vue'
 import { ref, watch, onMounted, onUnmounted } from 'vue'
 
 const minLg = ref(false)

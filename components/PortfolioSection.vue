@@ -18,12 +18,12 @@
                                 :href="`${site.attributes.linkLive}`" target="_blank">
                                 Visit Live
                             </a> -->
-                            <RouterLink
+                            <NuxtLink
                                 class="block text-nowrap text-white hover:text-[#F0BF6C] duration-300 text-2xl font-medium py-4 px-6  border-transparent border-[2px] hover:border-y-[#F0BF6C] "
                                 :to="`/${site.id}`">
                                 About
                                 project
-                            </RouterLink>
+                            </NuxtLink>
                         </div>
                     </div>
                 </div>
@@ -37,16 +37,59 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useFetch } from '@/composables/useFetch';
+// import { useFetch } from 'nuxt/app'
+// import { useFetch } from '@/composables/useFetch';
+
+import { useFetch } from '@vueuse/core'
 
 const portfolio = ref([])
 
-const getPortfolioData = async () => {
-    const { data } = await useFetch()
-    portfolio.value = data.data
+const { data } = await $fetch('https://test-strapi-mrqj.onrender.com/api/portfolio-pages', {
+    method: 'GET',
+    params: {populate: 'deep'},
+    headers: {
+        authorization: 'Bearer b705102d4bcbb581f4ba48e7a1fbee391eb7cf8ce1d9cbc0f69cc483f29763dd6af3545a85f5d2fbeff6bff67c01c9dd1537d8cb49c2a145b09f7b6137c130139934d79c6febab6db4518da4f8e95a101dd1116215fab50176d11a124de118e0b72d09e5664c8494e41c7306650ca450b236ec765d1811819b6bed79aecef21b'
+    }
 }
+)
 
-getPortfolioData()
+portfolio.value = data
+
+// onMounted(async () => {
+//     const { data } = await useFetch('https://test-strapi-mrqj.onrender.com/api/portfolio-pages', {
+//     params: {populate: 'deep'},
+//     headers: {
+//         authorization: 'Bearer b705102d4bcbb581f4ba48e7a1fbee391eb7cf8ce1d9cbc0f69cc483f29763dd6af3545a85f5d2fbeff6bff67c01c9dd1537d8cb49c2a145b09f7b6137c130139934d79c6febab6db4518da4f8e95a101dd1116215fab50176d11a124de118e0b72d09e5664c8494e41c7306650ca450b236ec765d1811819b6bed79aecef21b'
+//     }
+// })
+
+// portfolio.value = data.data
+// })
+
+// const getPortfolioData = async () => {
+//     const { data } = await useFetch('https://test-strapi-mrqj.onrender.com/api/portfolio-pages', {
+
+//   onRequest({ request, options }) {
+//     options.headers.authorization = 'Bearer b705102d4bcbb581f4ba48e7a1fbee391eb7cf8ce1d9cbc0f69cc483f29763dd6af3545a85f5d2fbeff6bff67c01c9dd1537d8cb49c2a145b09f7b6137c130139934d79c6febab6db4518da4f8e95a101dd1116215fab50176d11a124de118e0b72d09e5664c8494e41c7306650ca450b236ec765d1811819b6bed79aecef21b'
+//   },
+//   onRequestError({ request, options, error }) {
+//     // Handle the request errors
+//   },
+//   onResponse({ request, response, options }) {
+//     // Process the response data
+//     // localStorage.setItem('token', response._data.token)
+//     // portfolio.value = response._data
+//   },
+//   onResponseError({ request, response, options }) {
+//     // Handle the response errors
+//   }
+// })
+// portfolio.value = data.data
+// }
+
+// getPortfolioData()
+
+    // portfolio.value = data.data
 
 </script>
 
