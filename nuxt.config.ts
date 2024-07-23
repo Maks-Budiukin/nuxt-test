@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ["@vueuse/nuxt", "@nuxtjs/tailwindcss", "@nuxt/image"],
+  modules: ["@vueuse/nuxt", "@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/robots"],
   css: ['~/assets/css/main.css'],
   image: {
     screens: {
@@ -13,5 +13,10 @@ export default defineNuxtConfig({
       'xl': 1280,
       '2xl': 1536
     },
-  }
+  },
+  app: {
+    head: {
+        link: [{ rel: 'icon', type: 'image/svg', href: '/11.svg' }]
+    }
+},
 })
