@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center items-center">
+    <section id="description" class="flex justify-center items-center">
         <div class="w-full px-5 md:px-6 lg:w-[1000px] xl:w-[1240px] 2xl:w-[1520px]">
             <div class="flex justify-center items-center">
                 <div
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>

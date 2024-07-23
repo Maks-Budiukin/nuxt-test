@@ -1,6 +1,6 @@
 <template>
-    <div class="flex justify-center items-center">
-        <div class="w-full px-5 py-6 xl:py-10 2xl:py-20 md:px-6 lg:w-[1000px] xl:w-[1240px] 2xl:w-[1520px]">
+    <section id="portfolio" class="flex justify-center items-center pt-20">
+        <div class="w-full px-5 md:px-6 lg:w-[1000px] xl:w-[1240px] 2xl:w-[1520px]">
 
             <div class="mb-8">
                 <h2 class="font-semibold text-5xl text-white">Portfolio</h2>
@@ -27,7 +27,7 @@
 
 
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
@@ -40,8 +40,6 @@ const { data } = await $fetch('https://test-strapi-mrqj.onrender.com/api/portfol
     }
 }
 );
-
-console.log(data)
 
 </script>
 

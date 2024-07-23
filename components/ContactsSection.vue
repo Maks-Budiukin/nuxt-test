@@ -1,6 +1,6 @@
 <template>
 
-    <div class="mx-auto w-full lg:w-[1000px] xl:w-[1240px] 2xl:w-[1520px]  px-5 py-6 xl:py-10 2xl:py-20 md:px-6">
+    <footer id="contacts" class="mx-auto w-full lg:w-[1000px] xl:w-[1240px] 2xl:w-[1520px]  px-5 pt-20 md:px-6">
 
         <div class="mb-8">
             <h2 class="font-semibold text-5xl text-white">Get in touch</h2>
@@ -105,7 +105,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </footer>
 
 </template>
 

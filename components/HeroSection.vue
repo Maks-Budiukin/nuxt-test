@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <section class="">
         <div class="flex justify-center items-center ">
             <div
                 class="flex md:items-center justify-between gap-5 2xl:gap-32 w-full px-5 py-10 2xl:py-20 md:px-6 lg:w-[1000px] xl:w-[1240px] 2xl:w-[1520px]">
@@ -121,7 +121,7 @@
 
         </div>
         <div class="border-[2px] w-[50%] border-[#F0BF6C] h-[1px] ml-[35%]"></div>
-    </div>
+    </section>
 </template>
 
 <script setup>
