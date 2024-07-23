@@ -14,6 +14,9 @@ useHead({
   ],
   bodyAttrs: {
     class: 'bg-[#141414] bg-common bg-contain bg-repeat'
+  },
+  htmlAttrs: {
+    lang: 'en'
   }
 })
 </script>
