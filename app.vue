@@ -18,9 +18,15 @@ useHead({
 })
 
 useSeoMeta({
-  ogTitle: 'Maks Budiukin portfolio site',
   description: 'Welcome to my site',
-  ogDescription: 'Welcome to my site at social media',
-  ogImage: '/og-image.webp'
+  ogUrl: 'https://nuxt-test-sigma-dusky.vercel.app/',
+  ogTitle: 'Creative web-development of any difficulty',
+  ogType: 'website',
+  ogDescription: 'Check my portfolio and order site for your business!',
+  ogImage: {
+    url: 'https://nuxt-test-sigma-dusky.vercel.app/og-image2.jpg',
+    width: '500',
+    height: '281'
+  }
 });
 </script>
