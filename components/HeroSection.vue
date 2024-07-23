@@ -16,28 +16,28 @@
                         <div class="flex flex-col gap-3 md:px-5">
 
                             <div class="col-span-1">
-                                <NuxtLink to="https://t.me/bud_maks" target="_blank"
+                                <NuxtLink to="https://t.me/bud_maks" target="_blank" aria-label="Contact Maks via Telegram"
                                     class="stroke-white hover:stroke-[#F0BF6C] duration-300">
                                     <IconsTelegram :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank"
+                                <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank" aria-label="View Maks' GitHub"
                                     class="fill-white hover:fill-[#F0BF6C] duration-300">
                                     <IconsGithub :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank"
+                                <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank" aria-label="View Maks' GitLab"
                                     class="stroke-white hover:stroke-[#F0BF6C] duration-300">
                                     <IconsGitlab :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
+                                <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank" aria-label="Contact Maks via LinkedIn"
                                     class="fill-white hover:fill-[#F0BF6C] duration-300">
                                     <IconsLinkedIn :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
@@ -89,28 +89,28 @@
                         </div>
 
                         <div class="col-span-1">
-                            <NuxtLink to="https://t.me/bud_maks" target="_blank"
+                            <NuxtLink to="https://t.me/bud_maks" target="_blank" aria-label="Contact Maks via Telegram"
                                 class="stroke-white hover:stroke-[#F0BF6C] duration-300">
                                 <IconsTelegram :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank"
+                            <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank" aria-label="View Maks' GitHub"
                                 class="fill-white hover:fill-[#F0BF6C] duration-300">
                                 <IconsGithub :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank"
+                            <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank" aria-label="View Maks' GitLab"
                                 class="stroke-white hover:stroke-[#F0BF6C] duration-300">
                                 <IconsGitlab :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
+                            <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank" aria-label="Contact Maks via LinkedIn"
                                 class="fill-white hover:fill-[#F0BF6C] duration-300">
                                 <IconsLinkedIn :size="minLg ? '48' : '36'" />
                             </NuxtLink>
