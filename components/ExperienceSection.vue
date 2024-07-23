@@ -9,10 +9,10 @@
             <div class="flex flex-col gap-4 text-white">
                 <div class="flex items-start gap-4">
                     <div class="flex items-center my-4">
-                        <div class="bg-[#7e7e7e] pl-2 pr-4">
+                        <div class="bg-[#5c5c5c] pl-2 pr-4">
                             <p class="font-bold">2023</p>
                         </div>
-                        <div class="w-4 h-4 bg-[#7e7e7e] rotate-45 ml-[-8px]"></div>
+                        <div class="w-4 h-4 bg-[#5c5c5c] rotate-45 ml-[-8px]"></div>
                     </div>
 
                     <div>
@@ -50,10 +50,10 @@
 
                 <div class="flex items-start gap-4">
                     <div class="flex items-center my-4 opacity-0">
-                        <div class="bg-[#7e7e7e] pl-2 pr-4">
+                        <div class="bg-[#5c5c5c] pl-2 pr-4">
                             <p class="font-bold">2023</p>
                         </div>
-                        <div class="w-4 h-4 bg-[#7e7e7e] rotate-45 ml-[-8px]"></div>
+                        <div class="w-4 h-4 bg-[#5c5c5c] rotate-45 ml-[-8px]"></div>
                     </div>
 
                     <div>
@@ -100,10 +100,10 @@
 
                 <div class="flex items-start gap-4">
                     <div class="flex items-center my-4">
-                        <div class="bg-[#7e7e7e] pl-2 pr-4">
+                        <div class="bg-[#5c5c5c] pl-2 pr-4">
                             <p class="font-bold">2022</p>
                         </div>
-                        <div class="w-4 h-4 bg-[#7e7e7e] rotate-45 ml-[-8px]"></div>
+                        <div class="w-4 h-4 bg-[#5c5c5c] rotate-45 ml-[-8px]"></div>
                     </div>
 
                     <div>
