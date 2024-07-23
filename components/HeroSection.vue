@@ -18,28 +18,28 @@
                             <div class="col-span-1">
                                 <NuxtLink to="https://t.me/bud_maks" target="_blank"
                                     class="stroke-white hover:stroke-[#F0BF6C] duration-300">
-                                    <Telegram :size="minLg ? '48' : '64'" />
+                                    <IconsTelegram :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
                                 <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank"
                                     class="fill-white hover:fill-[#F0BF6C] duration-300">
-                                    <Github :size="minLg ? '48' : '64'" />
+                                    <IconsGithub :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
                                 <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank"
                                     class="stroke-white hover:stroke-[#F0BF6C] duration-300">
-                                    <Gitlab :size="minLg ? '48' : '64'" />
+                                    <IconsGitlab :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
                                 <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
                                     class="fill-white hover:fill-[#F0BF6C] duration-300">
-                                    <LinkedIn :size="minLg ? '48' : '64'" />
+                                    <IconsLinkedIn :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
                         </div>
@@ -91,28 +91,28 @@
                         <div class="col-span-1">
                             <NuxtLink to="https://t.me/bud_maks" target="_blank"
                                 class="stroke-white hover:stroke-[#F0BF6C] duration-300">
-                                <Telegram :size="minLg ? '48' : '36'" />
+                                <IconsTelegram :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
                             <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank"
                                 class="fill-white hover:fill-[#F0BF6C] duration-300">
-                                <Github :size="minLg ? '48' : '36'" />
+                                <IconsGithub :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
                             <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank"
                                 class="stroke-white hover:stroke-[#F0BF6C] duration-300">
-                                <Gitlab :size="minLg ? '48' : '36'" />
+                                <IconsGitlab :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
                             <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
                                 class="fill-white hover:fill-[#F0BF6C] duration-300">
-                                <LinkedIn :size="minLg ? '48' : '36'" />
+                                <IconsLinkedIn :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
                     </div>
@@ -125,10 +125,6 @@
 </template>
 
 <script setup>
-import Telegram from './icons/Telegram.vue'
-import Github from './icons/Github.vue'
-import Gitlab from './icons/Gitlab.vue'
-import LinkedIn from './icons/LinkedIn.vue'
 import { ref, watch, onMounted, onUnmounted } from 'vue'
 
 const minLg = ref(false)

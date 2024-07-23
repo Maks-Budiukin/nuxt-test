@@ -1,9 +1,9 @@
 <template>
     <div class="h-full w-full">
-        <!-- <div class="h-full w-full flex justify-center items-center">
+        <div class="h-full w-full flex justify-center items-center">
             <VueSpinnerIos v-show="!isImageLoaded" color="#F0BF6C" size="40" />
-        </div> -->
-        <div class="">
+        </div>
+        <div v-show="!open && isImageLoaded" class="h-full w-full">
             <div class="flex items-center">
                 <div class="mb-4 mx-auto relative">
 
@@ -12,7 +12,7 @@
                     <div class="py-4 border-y-[2px] border-[#F0BF6C] sm:border-none">
                         <Transition :name="transitionName" mode="out-in">
 
-                            <img @load="imageLoading" :key="currentImage"
+                            <img ref="mainImage" @load="imageLoading" :key="currentImage"
                                 :src="`https://test-strapi-mrqj.onrender.com${currentImage}`" alt=""
                                 class="w-full sm:rounded-lg cursor-pointer big-image" @click="handleOpenModal">
                         </Transition>
@@ -69,11 +69,20 @@ const { width } = useWindowSize()
 const isImageLoaded = ref(false)
 
 const imageLoading = () => {
+    
     isImageLoaded.value = true
     nextTick(() => {
         activeImagePosition()
     })
 }
+
+const mainImage = ref(null)
+
+onMounted(() => {
+  if (mainImage.value.complete) {
+    imageLoading()
+  }
+})
 
 const currentImageIndex = ref(2)
 

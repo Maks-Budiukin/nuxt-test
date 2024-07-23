@@ -29,7 +29,7 @@
                             <NuxtLink to="https://t.me/bud_maks" target="_blank"
                                 class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] stroke-[#FFFFFF] hover:stroke-[#F0BF6C] duration-300">
                                 <div>
-                                    <Telegram size="32" />
+                                    <IconsTelegram size="32" />
                                 </div>
                                 <div>
                                     <p class="">Telegram</p>
@@ -65,7 +65,7 @@
                             <NuxtLink to="mailto:maks.budyukin@gmail.com" target="_blank"
                                 class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] fill-[#FFFFFF] hover:fill-[#F0BF6C] duration-300">
                                 <div>
-                                    <Email size="32" />
+                                    <IconsEmail size="32" />
                                 </div>
                                 <div>
                                     <p class="">Mail</p>
@@ -77,7 +77,7 @@
                             <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
                                 class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] fill-[#FFFFFF] hover:fill-[#F0BF6C] duration-300">
                                 <div>
-                                    <LinkedIn size="32" />
+                                    <IconsLinkedIn size="32" />
                                 </div>
                                 <div>
                                     <p class="">LinkedIn</p>
@@ -97,28 +97,27 @@
                 </div>
                 <form id="messageForm" @submit.prevent="handleFormSubmit" class="flex flex-col gap-3">
                     <div class="flex flex-col gap-2 text-white focus-within:text-[#F0BF6C] duration-300">
-                        <label for="name">Your name</label>
-                        <input v-model="name" id="name" type="text" autocomplete="true" required
+                        <label :for="nameId">Your name</label>
+                        <input v-model="name" :id="nameId" type="text" autocomplete="on" required
                             class=" text-white text-xl bg-[#3D3E42] rounded outline-none hover:outline-[#F0BF6C] duration-300 p-3 focus:ring focus:ring-[#F0BF6C]">
                     </div>
 
                     <div class="flex flex-col gap-2 text-white focus-within:text-[#F0BF6C] duration-300">
-                        <label for="email">Your email</label>
-                        <input v-model="email" id="email" type="email" autocomplete="true" required
+                        <label :for="emailId">Your email</label>
+                        <input v-model="email" :id="emailId" type="email" autocomplete="on" required
                             class=" text-white text-xl bg-[#3D3E42] rounded outline-none hover:outline-[#F0BF6C] duration-300 p-3 focus:ring focus:ring-[#F0BF6C]">
                     </div>
 
                     <div class="flex flex-col gap-2 text-white focus-within:text-[#F0BF6C] duration-300">
-                        <label for="text">Preferred contact</label>
-                        <input v-model="preferredContact" id="text" type="text" autocomplete="true"
+                        <label :for="preferredContactId">Preferred contact</label>
+                        <input v-model="preferredContact" :id="preferredContactId" type="text" autocomplete="on"
                             class=" text-white text-xl bg-[#3D3E42] rounded outline-none hover:outline-[#F0BF6C] duration-300 p-3 focus:ring focus:ring-[#F0BF6C]">
                     </div>
 
                     <div class="flex flex-col gap-2 text-white focus-within:text-[#F0BF6C] duration-300">
-                        <label for="message">What would you like to discuss?</label>
-                        <textarea v-model="message" id="message" type="text" rows="3" autocomplete="true"
-                            class=" text-white text-xl bg-[#3D3E42] rounded outline-none hover:outline-[#F0BF6C] duration-300 p-3 focus:ring focus:ring-[#F0BF6C] resize-none">
-                            </textarea>
+                        <label :for="messageId">What would you like to discuss?</label>
+                        <textarea v-model="message" :id="messageId" rows="3" autocomplete="on"
+                            class=" text-white text-xl bg-[#3D3E42] rounded outline-none hover:outline-[#F0BF6C] duration-300 p-3 focus:ring focus:ring-[#F0BF6C] resize-none"></textarea>
                     </div>
 
                     <div class="mt-4 flex justify-center items-center lg:justify-end">
@@ -135,9 +134,6 @@
 </template>
 
 <script setup>
-import Telegram from './icons/Telegram.vue'
-import Email from './icons/Email.vue'
-import LinkedIn from './icons/LinkedIn.vue'
 import { ref, computed } from 'vue'
 
 import { sendMessage } from '@/composables/sendMessage'
@@ -146,6 +142,11 @@ const name = ref('')
 const email = ref('')
 const preferredContact = ref('')
 const message = ref('')
+
+const nameId = useId()
+const emailId = useId()
+const preferredContactId = useId()
+const messageId = useId()
 
 const theMessage = computed(() => {
     return `New message from CV-site!\n<b>Sender:</b> ${name.value} \n<b>Email:</b> ${email.value}\n<b>Contact:</b> ${preferredContact.value}\n<b>Message:</b> ${message.value}`

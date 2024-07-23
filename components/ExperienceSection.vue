@@ -18,7 +18,7 @@
                     <div>
                         <div class="flex items-center gap-3 mb-4 ml-2">
                             <div class="flex items-center justify-center">
-                                <Point size="20" />
+                                <IconsPoint size="20" :id="id"/>
                             </div>
                             <div>
                                 <h3 class="text-[32px] ">GoToInc</h3>
@@ -59,7 +59,7 @@
                     <div>
                         <div class="flex items-center gap-3 mb-4 ml-2">
                             <div class="flex items-center justify-center ">
-                                <Point size="20" />
+                                <IconsPoint size="20" :id="id3"/>
                             </div>
                             <div>
                                 <h3 class="text-[32px] ">Freelance</h3>
@@ -109,7 +109,7 @@
                     <div>
                         <div class="flex items-center gap-3 mb-4 ml-2">
                             <div class="flex items-center justify-center">
-                                <Point size="20" />
+                                <IconsPoint size="20" :id="id2"/>
                             </div>
                             <div>
                                 <h3 class="text-[32px] ">GoIT</h3>
@@ -147,7 +147,9 @@
 </template>
 
 <script setup>
-import Point from './icons/Point.vue'
+const id = useId()
+const id2 = useId()
+const id3 = useId()
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 
@@ -8,10 +6,9 @@ const CHAT_ID = '386534559'
 
 export const sendMessage = async (message) => {
   try {
-    const { data } = await axios({
+    const { data } = await $fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       method: 'post',
-      url: `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
-      data: {
+      body: {
         chat_id: CHAT_ID,
         text: message,
         parse_mode: 'HTML'

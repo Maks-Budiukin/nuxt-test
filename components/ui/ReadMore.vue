@@ -8,7 +8,7 @@
         </p>
         <div class="flex justify-end text-white fill-[#FFFFFF] hover:text-[#F0BF6C] hover:fill-[#F0BF6C] duration-300 items-center cursor-pointer xl:hidden mt-2"
             @click="readMore = !readMore">
-            <ArrowRight size="12" class="mt-1" :class="readMore ? '-rotate-90 mr-2' : 'order-1 ml-2 rotate-90'" />
+            <IconsArrowRight size="12" class="mt-1" :class="readMore ? '-rotate-90 mr-2' : 'order-1 ml-2 rotate-90'" />
 
             <p v-if="!readMore" class=" text-base font-medium">More</p>
             <p v-else class=" text-base font-medium ">Less</p>
@@ -18,7 +18,6 @@
 </template>
 
 <script setup>
-import ArrowRight from '../icons/ArrowRight.vue'
 import { ref } from 'vue'
 
 const readMore = ref(false)

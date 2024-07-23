@@ -28,7 +28,7 @@
                                 <div v-if="linkLive" class="w-full mb-3">
                                     <UiButton @click="navigate(linkLive)">
                                         <span class="mr-2">
-                                            <Web size="22" />
+                                            <IconsWeb size="22" />
                                         </span>
                                         Visit Live</UiButton>
                                 </div>
@@ -37,7 +37,7 @@
                                     <div v-if="linkFE" class="flex-1">
                                         <UiButton variant="secondary" @click="navigate(linkFE)">
                                             <span class="mr-2">
-                                                <Github size="22" />
+                                                <IconsGithub size="22" />
                                             </span>
                                             Frontend</UiButton>
                                     </div>
@@ -45,7 +45,7 @@
                                     <div v-if="linkBE" class="flex-1">
                                         <UiButton variant="secondary" @click="navigate(linkBE)">
                                             <span class="mr-2">
-                                                <Github size="22" />
+                                                <IconsGithub size="22" />
                                             </span>
                                             Backend
                                         </UiButton>
@@ -62,8 +62,6 @@
 
 <script setup>
 import { computed } from 'vue'
-import Github from './icons/Github.vue';
-import Web from './icons/Web.vue';
 
 const props = defineProps({
     data: {
@@ -86,10 +84,6 @@ const pageDescription = computed(() => {
 
 const pageGallery = computed(() => {
     return props.data?.attributes?.gallery.data || []
-})
-
-onMounted(() => {
-    console.log(pageGallery.value)
 })
 
 const linkLive = computed(() => {

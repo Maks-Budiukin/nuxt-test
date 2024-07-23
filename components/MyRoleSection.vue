@@ -11,7 +11,7 @@
                     <div>
                         <div class="flex items-center gap-3 mb-4 ml-2">
                             <div class="flex items-center justify-center">
-                                <Point size="20" />
+                                <IconsPoint size="20" />
                             </div>
                             <div>
                                 <h3 class="text-[32px] ">{{ item.roleHeader }}</h3>
@@ -37,7 +37,6 @@
 </template>
 
 <script setup>
-import Point from './icons/Point.vue'
 import { computed } from 'vue'
 
 const props = defineProps({
