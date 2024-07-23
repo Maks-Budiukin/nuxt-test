@@ -136,7 +136,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-import { sendMessage } from '@/composables/sendMessage'
+import { sendMessage } from '@/utils/sendMessage'
 
 const name = ref('')
 const email = ref('')
