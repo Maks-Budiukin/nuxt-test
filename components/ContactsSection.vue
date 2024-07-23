@@ -36,31 +36,7 @@
                                 </div>
                             </NuxtLink>
                         </div>
-
-                        <!-- <div>
-                            <a href="https://t.me/bud_maks" target="_blank"
-                                class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] fill-[#FFFFFF] hover:fill-[#F0BF6C] duration-300">
-                                <div>
-                                    <Whatsapp size="32" />
-                                </div>
-                                <div>
-                                    <p class="">WhatsApp</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="https://t.me/bud_maks" target="_blank"
-                                class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] fill-[#FFFFFF] hover:fill-[#F0BF6C] duration-300">
-                                <div>
-                                    <Viber size="32" />
-                                </div>
-                                <div>
-                                    <p class="">Viber</p>
-                                </div>
-                            </a>
-                        </div> -->
-
+                        
                         <div>
                             <NuxtLink to="mailto:maks.budyukin@gmail.com" target="_blank"
                                 class="flex gap-3 items-center text-white text-lg hover:text-[#F0BF6C] fill-[#FFFFFF] hover:fill-[#F0BF6C] duration-300">

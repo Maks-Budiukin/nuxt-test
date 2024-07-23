@@ -1,9 +1,9 @@
 <template>
     <div class="h-full w-full">
-        <div class="h-full w-full flex justify-center items-center">
+        <!-- <div class="h-full w-full flex justify-center items-center">
             <VueSpinnerIos v-show="!isImageLoaded" color="#F0BF6C" size="40" />
-        </div>
-        <div v-show="!open && isImageLoaded" class="h-full w-full">
+        </div> -->
+        <div v-show="!open" class="h-full w-full">
             <div class="flex items-center">
                 <div class="mb-4 mx-auto relative">
 
@@ -12,9 +12,11 @@
                     <div class="py-4 border-y-[2px] border-[#F0BF6C] sm:border-none">
                         <Transition :name="transitionName" mode="out-in">
 
-                            <img ref="mainImage" @load="imageLoading" :key="currentImage"
+                            <KeepAlive>
+                                <NuxtImg ref="mainImage" :key="currentImage" loading="lazy"
                                 :src="`https://test-strapi-mrqj.onrender.com${currentImage}`" alt=""
-                                class="w-full sm:rounded-lg cursor-pointer big-image" @click="handleOpenModal">
+                                class="w-full sm:rounded-lg cursor-pointer big-image " @click="handleOpenModal" />
+                            </KeepAlive>
                         </Transition>
 
                     </div>
@@ -36,8 +38,8 @@
                             class="min-w-[200px] duration-300 border-[3px] rounded p-1 cursor-pointer"
                             :class="idx === currentImageIndex ? 'border-[#F0BF6C] min-w-[220px]' : 'border-transparent'">
 
-                            <img :src="`https://test-strapi-mrqj.onrender.com${image}`" alt="" @click="changeImage(idx)"
-                                class="rounded-sm">
+                            <NuxtPicture :src="`https://test-strapi-mrqj.onrender.com${image}`" sizes="220px" alt="" @click="changeImage(idx)"
+                                class="rounded-sm" />
                         </div>
 
                     </div>
@@ -47,7 +49,7 @@
 
             </div>
         </div>
-        <UiCarouselModal :open="open" @close="open = false" :images="images"
+        <LazyUiCarouselModal :open="open" @close="open = false" :images="images"
             :currentImage="`https://test-strapi-mrqj.onrender.com${currentFullImage}`" v-model="currentImageIndex" />
     </div>
 </template>

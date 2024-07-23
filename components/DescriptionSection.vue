@@ -13,7 +13,7 @@
 
                         <div
                             class="flex-1 flex justify-center items-center max-w-full md:max-w-[75%] lg:max-w-[50%] lg:order-1">
-                            <UiCarousel :data="pageGallery" />
+                            <LazyUiCarousel :data="pageGallery" />
                         </div>
 
                         <div class="flex-1 flex flex-col gap-8 sm:items-center lg:items-start">

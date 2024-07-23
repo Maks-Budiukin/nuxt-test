@@ -7,17 +7,12 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div v-for="site in portfolio" :key="site.id" class="mx-auto">
+                <div v-for="site in data" :key="site.id" class="mx-auto">
                     <div class="col-span-1 portfolio-thumb relative cursor-pointer">
-                        <img :src="`https://test-strapi-mrqj.onrender.com${site.attributes.preview.data.attributes.url}`"
-                            alt="My work-1" class="rounded-lg portfolio-picture h-full">
+                        <NuxtImg :src="`https://test-strapi-mrqj.onrender.com${site.attributes.preview.data.attributes.url}`"
+                            alt="My work-1" class="rounded-lg portfolio-picture h-full" />
                         <div
                             class="button-container absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] hidden">
-                            <!-- <a v-if="site.attributes.linkLive"
-                                class="block text-nowrap text-center text-white hover:text-[#F0BF6C] duration-300 text-2xl font-medium py-4 px-6  border-transparent border-[2px] hover:border-y-[#F0BF6C] "
-                                :href="`${site.attributes.linkLive}`" target="_blank">
-                                Visit Live
-                            </a> -->
                             <NuxtLink
                                 class="block text-nowrap text-white hover:text-[#F0BF6C] duration-300 text-2xl font-medium py-4 px-6  border-transparent border-[2px] hover:border-y-[#F0BF6C] "
                                 :to="`/${site.id}`">
@@ -36,13 +31,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-// import { useFetch } from 'nuxt/app'
-// import { useFetch } from '@/composables/useFetch';
-
-import { useFetch } from '@vueuse/core'
-
-const portfolio = ref([])
 
 const { data } = await $fetch('https://test-strapi-mrqj.onrender.com/api/portfolio-pages', {
     method: 'GET',
@@ -51,45 +39,9 @@ const { data } = await $fetch('https://test-strapi-mrqj.onrender.com/api/portfol
         authorization: 'Bearer b705102d4bcbb581f4ba48e7a1fbee391eb7cf8ce1d9cbc0f69cc483f29763dd6af3545a85f5d2fbeff6bff67c01c9dd1537d8cb49c2a145b09f7b6137c130139934d79c6febab6db4518da4f8e95a101dd1116215fab50176d11a124de118e0b72d09e5664c8494e41c7306650ca450b236ec765d1811819b6bed79aecef21b'
     }
 }
-)
+);
 
-portfolio.value = data
-
-// onMounted(async () => {
-//     const { data } = await useFetch('https://test-strapi-mrqj.onrender.com/api/portfolio-pages', {
-//     params: {populate: 'deep'},
-//     headers: {
-//         authorization: 'Bearer b705102d4bcbb581f4ba48e7a1fbee391eb7cf8ce1d9cbc0f69cc483f29763dd6af3545a85f5d2fbeff6bff67c01c9dd1537d8cb49c2a145b09f7b6137c130139934d79c6febab6db4518da4f8e95a101dd1116215fab50176d11a124de118e0b72d09e5664c8494e41c7306650ca450b236ec765d1811819b6bed79aecef21b'
-//     }
-// })
-
-// portfolio.value = data.data
-// })
-
-// const getPortfolioData = async () => {
-//     const { data } = await useFetch('https://test-strapi-mrqj.onrender.com/api/portfolio-pages', {
-
-//   onRequest({ request, options }) {
-//     options.headers.authorization = 'Bearer b705102d4bcbb581f4ba48e7a1fbee391eb7cf8ce1d9cbc0f69cc483f29763dd6af3545a85f5d2fbeff6bff67c01c9dd1537d8cb49c2a145b09f7b6137c130139934d79c6febab6db4518da4f8e95a101dd1116215fab50176d11a124de118e0b72d09e5664c8494e41c7306650ca450b236ec765d1811819b6bed79aecef21b'
-//   },
-//   onRequestError({ request, options, error }) {
-//     // Handle the request errors
-//   },
-//   onResponse({ request, response, options }) {
-//     // Process the response data
-//     // localStorage.setItem('token', response._data.token)
-//     // portfolio.value = response._data
-//   },
-//   onResponseError({ request, response, options }) {
-//     // Handle the response errors
-//   }
-// })
-// portfolio.value = data.data
-// }
-
-// getPortfolioData()
-
-    // portfolio.value = data.data
+console.log(data)
 
 </script>
 

@@ -2,6 +2,16 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ["@vueuse/nuxt", "@nuxtjs/tailwindcss"],
-  css: ['~/assets/css/main.css'],  
+  modules: ["@vueuse/nuxt", "@nuxtjs/tailwindcss", "@nuxt/image"],
+  css: ['~/assets/css/main.css'],
+  image: {
+    screens: {
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      '2xl': 1536
+    },
+  }
 })

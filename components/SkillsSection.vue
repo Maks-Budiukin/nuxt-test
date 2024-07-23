@@ -10,8 +10,8 @@
                 <div v-for="skill in skills" :key="skill.name"
                     class="col-span-1 w-full min-w-[100px] lg:min-w-[180px] flex flex-col items-center justify-center bg-[#3D3E42] hover:bg-[#F0BF6C99] duration-300 rounded-lg p-4">
 
-                    <div class="w-[50px] lg:w-[100px] mb-4">
-                        <img :src="skill.icon" alt="skill icon">
+                    <div class="mb-4">
+                        <NuxtImg :src="skill.icon" sizes="50px lg:100px" alt="skill icon" />
                     </div>
                     <div>
                         <p>{{ skill.name }}</p>
