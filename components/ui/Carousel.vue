@@ -14,9 +14,11 @@
                         <Transition :name="transitionName" mode="out-in">
                             <KeepAlive>                     
                                                                            
-                                        <NuxtImg ref="mainImage" :key="currentImage" @load="imageLoading" :placeholder="[placeholderWidth, placeholderHeight]"
+                                        <div :class="placeholderSize">
+                                            <NuxtImg ref="mainImage" :key="currentImage" @load="imageLoading"
                                         :src="`https://test-strapi-mrqj.onrender.com${currentImage}`" alt="Project picture"
                                         class="w-full sm:rounded-lg cursor-pointer big-image " @click="handleOpenModal" />
+                                        </div>
 
                             </KeepAlive>
                         </Transition>
