@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="">
-                            <img src="/pic15.webp" alt="Max's photo" class="max-h-[400px]">
+                            <img src="/pic15.webp" alt="Max's photo" class="max-w-[300px] max-h-[400px]">
                         </div>
                     </div>
 
@@ -79,7 +79,7 @@
                 <div class="hidden min-[505px]:block lg:flex items-end min-w-[210px]">
 
                     <div class=" ">
-                        <img src="/pic15.webp" alt="Max's photo" class="max-h-[500px]">
+                        <img src="/pic15.webp" alt="Max's photo" class="max-w-[300px] max-h-[500px]">
                     </div>
 
                     <div class="grid grid-cols-4 lg:grid-cols-1 gap-3 md:px-5 py-5 lg:py-0">
