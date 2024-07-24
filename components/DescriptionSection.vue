@@ -9,7 +9,7 @@
                             {{ pageHeader }}</h1>
                     </div>
 
-                    <div class="flex flex-col lg:flex-row items-center lg:items-start xl:items-center gap-12">
+                    <div class="flex flex-col lg:flex-row items-center gap-12">
 
                         <div
                             class="flex-1 flex justify-center items-center max-w-full md:max-w-[75%] lg:max-w-[50%] lg:order-1">

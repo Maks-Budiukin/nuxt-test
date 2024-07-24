@@ -3,26 +3,19 @@
         <!-- <div class="h-full w-full flex justify-center items-center">
             <VueSpinnerIos v-show="!isImageLoaded" color="#F0BF6C" size="40" />
         </div> -->
-        <div v-show="!open" class="h-full w-full flex-1" >            
-            <div class="flex items-center ">
-                <div class="mb-4 mx-auto relative ">
+        <div v-show="!open" class="h-full w-full" >            
+            <div class="flex items-center">
+                <div class="mb-4 mx-auto relative lg:min-h-[300px] xl:min-h-[370px] 2xl:min-h-[450px]">
 
                     <UiArrowButton :direction="'left'" size="32" shadow @click="onLeft" class="sm:hidden" />
 
                     <div class="py-4 border-y-[2px] border-[#F0BF6C] sm:border-none">
                         
                         <Transition :name="transitionName" mode="out-in">
-                            <KeepAlive>                     
-                                                                           
-                                        <div class="flex flex-col justify-center items-center" :class="placeholderSize">
-                                                   
-            <VueSpinnerIos v-show="!isImageLoaded" color="#F0BF6C" size="40" />
-     
-                                            <NuxtImg ref="mainImage" :key="currentImage" @load="imageLoading"
+                            <KeepAlive>              
+                                    <NuxtImg ref="mainImage" :key="currentImage" 
                                         :src="`https://test-strapi-mrqj.onrender.com${currentImage}`" alt="Project picture"
                                         class="w-full sm:rounded-lg cursor-pointer big-image " @click="handleOpenModal" />
-                                        </div>
-
                             </KeepAlive>
                         </Transition>
 
@@ -169,7 +162,7 @@ const placeholderWidth = ref(0)
 const placeholderHeight = ref(0)
 
 const placeholderSize = computed(() => {
-    return `min-w-[${placeholderWidth.value}px] min-h-[${placeholderHeight.value}px]`
+    return `min-h-[${placeholderHeight.value}px]`
 })
 
 const activeImagePositionVal = computed(() => {
@@ -189,8 +182,8 @@ watch(width, (val) => {
         activeImagePosition()
     }    
     placeholderWidth.value = carouselContainer.value?.offsetWidth
-    placeholderHeight.value = carouselContainer.value?.offsetWidth * 0.75
-}, {immediate: true})
+    placeholderHeight.value = carouselContainer.value?.offsetWidth * 0.562
+}, )
 
 watch(open, (val) => {
     if (val) {
@@ -205,7 +198,7 @@ watch(open, (val) => {
 
 watch(currentImageIndex, () => {
     activeImagePosition()
-})
+});
 
 </script>
 
