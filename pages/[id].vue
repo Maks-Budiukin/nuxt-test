@@ -38,7 +38,7 @@ useHead({
 
 useSeoMeta({
   description: seoDescription.value,
-  ogUrl: 'https://nuxt-test-sigma-dusky.vercel.app/',
+  ogUrl: `https://nuxt-test-sigma-dusky.vercel.app${route.fullPath}`,
   ogTitle: seoTitle.value,
   ogType: 'website',
   ogDescription: seoDescription.value,
