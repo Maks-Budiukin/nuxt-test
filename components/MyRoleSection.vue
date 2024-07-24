@@ -7,7 +7,7 @@
             </div>
 
             <div class="flex flex-col gap-4 text-white">
-                <div v-for="item in roles" :key="item.id" class="flex items-start gap-4">
+                <div v-for="item in data" :key="item.id" class="flex items-start gap-4">
                     <div>
                         <div class="flex items-center gap-3 mb-4 ml-2">
                             <div class="flex items-center justify-center">
@@ -37,18 +37,13 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
 
 const props = defineProps({
     data: {
         type: Object,
         required: true
     }
-})
-
-const roles = computed(() => {
-    return props.data?.attributes?.myRoles
-})
+});
 
 </script>
 

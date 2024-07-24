@@ -7,9 +7,10 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div v-for="site in data" :key="site.id" class="mx-auto">
+                <div v-for="site in props.data" :key="site.id" class="mx-auto">
                     <div class="col-span-1 portfolio-thumb relative cursor-pointer">
-                        <NuxtImg :src="`https://test-strapi-mrqj.onrender.com${site.attributes.preview.data.attributes.url}`"
+                        <NuxtImg
+                            :src="`https://test-strapi-mrqj.onrender.com${site.attributes.preview.data.attributes.url}`"
                             alt="My work-1" class="rounded-lg portfolio-picture w-full h-full" />
                         <div
                             class="button-container absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] hidden">
@@ -24,22 +25,26 @@
                 </div>
             </div>
 
-
-
         </div>
     </section>
 </template>
 
 <script setup>
-
-const { data } = await $fetch('https://test-strapi-mrqj.onrender.com/api/portfolio-pages', {
-    method: 'GET',
-    params: {populate: 'deep'},
-    headers: {
-        authorization: 'Bearer b705102d4bcbb581f4ba48e7a1fbee391eb7cf8ce1d9cbc0f69cc483f29763dd6af3545a85f5d2fbeff6bff67c01c9dd1537d8cb49c2a145b09f7b6137c130139934d79c6febab6db4518da4f8e95a101dd1116215fab50176d11a124de118e0b72d09e5664c8494e41c7306650ca450b236ec765d1811819b6bed79aecef21b'
+const props = defineProps({
+    data: {
+        type: Object,
+        required: true
     }
-}
-);
+})
+
+// const { data } = await $fetch('https://test-strapi-mrqj.onrender.com/api/portfolio-pages', {
+//     method: 'GET',
+//     params: {populate: 'deep'},
+//     headers: {
+//         authorization: 'Bearer b705102d4bcbb581f4ba48e7a1fbee391eb7cf8ce1d9cbc0f69cc483f29763dd6af3545a85f5d2fbeff6bff67c01c9dd1537d8cb49c2a145b09f7b6137c130139934d79c6febab6db4518da4f8e95a101dd1116215fab50176d11a124de118e0b72d09e5664c8494e41c7306650ca450b236ec765d1811819b6bed79aecef21b'
+//     }
+// }
+// );
 
 </script>
 

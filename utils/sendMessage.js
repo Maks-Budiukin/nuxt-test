@@ -37,8 +37,8 @@ export const sendMessage = async (message) => {
       },
     })
 
-
     return data
+    
   } catch (error) {
     
     toast(`Something went wrong :( 
