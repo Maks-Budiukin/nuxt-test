@@ -24,9 +24,10 @@ useSeoMeta({
   ogType: 'website',
   ogDescription: 'Check my portfolio and order site for your business!',
   ogImage: {
-    url: 'https://nuxt-test-sigma-dusky.vercel.app/og-image2.jpg',
-    width: '500',
-    height: '281'
-  }
+    url: 'https://nuxt-test-sigma-dusky.vercel.app/og-image4.jpg',
+    width: '1200',
+    height: '630'
+  },
+  ogSiteName: 'MAKS-BUDIUKIN.COM'
 });
 </script>
