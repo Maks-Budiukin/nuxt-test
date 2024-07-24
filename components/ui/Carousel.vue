@@ -14,7 +14,10 @@
                         <Transition :name="transitionName" mode="out-in">
                             <KeepAlive>                     
                                                                            
-                                        <div :class="placeholderSize">
+                                        <div class="flex flex-col justify-center items-center" :class="placeholderSize">
+                                                   
+            <VueSpinnerIos v-show="!isImageLoaded" color="#F0BF6C" size="40" />
+     
                                             <NuxtImg ref="mainImage" :key="currentImage" @load="imageLoading"
                                         :src="`https://test-strapi-mrqj.onrender.com${currentImage}`" alt="Project picture"
                                         class="w-full sm:rounded-lg cursor-pointer big-image " @click="handleOpenModal" />
