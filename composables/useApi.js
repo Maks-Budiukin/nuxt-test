@@ -13,13 +13,13 @@ export const useApi = async (id) => {
       url = `${BASE_URL}/portfolio-pages?populate=deep`
     }
   
-    const { data, error } = await useFetch(url, {
+    const { data, error } = await useAsyncData('item', () => $fetch(url, {
         method: 'GET',
         params: { populate: 'deep' },
         headers: {
             authorization: API_TOKEN
         }
-      });
+      }));
     
     if(error.value) {
       toast(`Something went wrong :( 
@@ -38,9 +38,8 @@ export const useApi = async (id) => {
             textAlign: 'center',
           },
         })
-    }
-    
-    return data
+    } 
 
+    return data.value
   }
   
