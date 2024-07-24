@@ -5,7 +5,7 @@
         </div> -->
         <div v-show="!open" class="h-full w-full" >            
             <div class="flex items-center">
-                <div class="mb-4 mx-auto relative lg:min-h-[300px] xl:min-h-[370px] 2xl:min-h-[450px]">
+                <div class="mb-4 mx-auto relative sm:min-h-[370px] min-[700px]:min-h-[410px] md:min-h-[365px] min-[900px]:min-h-[420px] lg:min-h-[300px] xl:min-h-[370px] 2xl:min-h-[450px]">
 
                     <UiArrowButton :direction="'left'" size="32" shadow @click="onLeft" class="sm:hidden" />
 
