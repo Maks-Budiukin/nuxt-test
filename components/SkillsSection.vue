@@ -11,7 +11,7 @@
                     class="col-span-1 w-full min-w-[100px] lg:min-w-[180px] flex flex-col items-center justify-center bg-[#3D3E42] hover:bg-[#F0BF6C99] duration-300 rounded-lg p-4">
 
                     <div class="mb-4">
-                        <img :src="skill.icon" class="w-[50px] lg:w-[100px] h-[50px] lg:h-[100px]" alt="skill icon" />
+                        <img :src="skill.icon" class="w-[50px] lg:w-[100px] h-full" alt="skill icon" />
                     </div>
                     <div>
                         <p>{{ skill.name }}</p>
