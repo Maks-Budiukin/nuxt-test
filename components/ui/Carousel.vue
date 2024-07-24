@@ -3,19 +3,21 @@
         <!-- <div class="h-full w-full flex justify-center items-center">
             <VueSpinnerIos v-show="!isImageLoaded" color="#F0BF6C" size="40" />
         </div> -->
-        <div v-show="!open" class="h-full w-full">
-            <div class="flex items-center">
-                <div class="mb-4 mx-auto relative">
+        <div v-show="!open" class="h-full w-full flex-1" >            
+            <div class="flex items-center ">
+                <div class="mb-4 mx-auto relative ">
 
                     <UiArrowButton :direction="'left'" size="32" shadow @click="onLeft" class="sm:hidden" />
 
                     <div class="py-4 border-y-[2px] border-[#F0BF6C] sm:border-none">
+                        
                         <Transition :name="transitionName" mode="out-in">
+                            <KeepAlive>                     
+                                                                           
+                                        <NuxtImg ref="mainImage" :key="currentImage" @load="imageLoading" :placeholder="[placeholderWidth, placeholderHeight]"
+                                        :src="`https://test-strapi-mrqj.onrender.com${currentImage}`" alt="Project picture"
+                                        class="w-full sm:rounded-lg cursor-pointer big-image " @click="handleOpenModal" />
 
-                            <KeepAlive>
-                                <NuxtImg ref="mainImage" :key="currentImage" loading="lazy"
-                                :src="`https://test-strapi-mrqj.onrender.com${currentImage}`" alt=""
-                                class="w-full sm:rounded-lg cursor-pointer big-image " @click="handleOpenModal" />
                             </KeepAlive>
                         </Transition>
 
@@ -38,7 +40,7 @@
                             class="min-w-[200px] duration-300 border-[3px] rounded p-1 cursor-pointer"
                             :class="idx === currentImageIndex ? 'border-[#F0BF6C] min-w-[220px]' : 'border-transparent'">
 
-                            <NuxtPicture :src="`https://test-strapi-mrqj.onrender.com${image}`" sizes="220px" alt="" @click="changeImage(idx)"
+                            <NuxtImg :src="`https://test-strapi-mrqj.onrender.com${image}`" sizes="sm:120px" alt="" @click="changeImage(idx)"
                                 class="rounded-sm" />
                         </div>
 
@@ -71,7 +73,6 @@ const { width } = useWindowSize()
 const isImageLoaded = ref(false)
 
 const imageLoading = () => {
-    
     isImageLoaded.value = true
     nextTick(() => {
         activeImagePosition()
@@ -157,6 +158,15 @@ const onLeft = () => {
 const carouselContainer = ref(null)
 const carousel = ref(null)
 
+
+
+const placeholderWidth = ref(0)
+const placeholderHeight = ref(0)
+
+const placeholderSize = computed(() => {
+    return `min-w-[${placeholderWidth.value}px] min-h-[${placeholderHeight.value}px]`
+})
+
 const activeImagePositionVal = computed(() => {
     return currentImageIndex.value * 200;
 })
@@ -172,8 +182,10 @@ onUnmounted(() => {
 watch(width, (val) => {
     if (val && carouselContainer.value && carousel.value) {
         activeImagePosition()
-    }
-})
+    }    
+    placeholderWidth.value = carouselContainer.value?.offsetWidth
+    placeholderHeight.value = carouselContainer.value?.offsetWidth * 0.75
+}, {immediate: true})
 
 watch(open, (val) => {
     if (val) {
