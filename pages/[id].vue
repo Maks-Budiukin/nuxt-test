@@ -6,6 +6,8 @@
 
   <MyRoleSection :data="rolesData" />
 
+  <ContactsSection />
+
 </template>
 
 

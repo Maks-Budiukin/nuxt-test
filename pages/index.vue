@@ -8,6 +8,9 @@
     <PortfolioSection :data="data" />
 
     <SkillsSection />
+
+    <ContactsSection />
+
 </template>
 
 <script setup>
