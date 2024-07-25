@@ -1,9 +1,9 @@
 <template>
     <button type="button"
-        class="flex items-center justify-center w-full text-xl font-medium border-[2px] hover:bg-[#F0BF6C] duration-300 rounded-lg px-4 sm:px-6 py-2 "
+        class="flex items-center justify-center w-full text-xl font-medium border-[2px] hover:bg-accent duration-300 rounded-lg px-4 sm:px-6 py-2 "
         :class="{
-            'border-transparent bg-[#F0BF6CCC] fill-[#000000] stroke-[#000000]': variant === 'primary',
-            'text-[#F0BF6C] border-[#F0BF6C] hover:text-[#000000] fill-[#F0BF6C] hover:fill-[#000000] stroke-[#F0BF6C] hover:stroke-[#000000]': variant === 'secondary'
+            'border-transparent bg-semiAccent fill-black stroke-black': variant === 'primary',
+            'text-accent border-accent hover:text-black fill-accent hover:fill-black stroke-accent hover:stroke-black': variant === 'secondary'
         }">
         <slot />
     </button>
@@ -16,5 +16,5 @@ const props = defineProps({
         type: String,
         default: 'primary'
     }
-})
+});
 </script>

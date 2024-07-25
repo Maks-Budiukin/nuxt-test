@@ -17,7 +17,7 @@ export const useApi = async (id) => {
         method: 'GET',
         params: { populate: 'deep' },
         headers: {
-            authorization: config.apiToken
+            authorization: config.public.apiToken
         }
       }));
     

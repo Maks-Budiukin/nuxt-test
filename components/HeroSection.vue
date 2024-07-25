@@ -6,7 +6,7 @@
                 <div>
                     <div class="mb-4 2xl:mb-12">
                         <p class="text-white text-4xl 2xl:text-6xl">Hi, I'm <span
-                                class="text-[#F0BF6C] text-4xl sm:text-5xl 2xl:text-7xl font-semibold text-nowrap min-[505px]:text-wrap">Maksym
+                                class="text-accent text-4xl sm:text-5xl 2xl:text-7xl font-semibold text-nowrap min-[505px]:text-wrap">Maksym
                                 Budiukin</span></p>
                     </div>
 
@@ -16,29 +16,32 @@
                         <div class="flex flex-col gap-3 md:px-5">
 
                             <div class="col-span-1">
-                                <NuxtLink to="https://t.me/bud_maks" target="_blank" aria-label="Contact Maks via Telegram"
-                                    class="stroke-white hover:stroke-[#F0BF6C] duration-300">
+                                <NuxtLink to="https://t.me/bud_maks" target="_blank"
+                                    aria-label="Contact Maks via Telegram"
+                                    class="stroke-white hover:stroke-accent duration-300">
                                     <IconsTelegram :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank" aria-label="View Maks' GitHub"
-                                    class="fill-white hover:fill-[#F0BF6C] duration-300">
+                                <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank"
+                                    aria-label="View Maks' GitHub" class="fill-white hover:fill-accent duration-300">
                                     <IconsGithub :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank" aria-label="View Maks' GitLab"
-                                    class="stroke-white hover:stroke-[#F0BF6C] duration-300">
+                                <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank"
+                                    aria-label="View Maks' GitLab"
+                                    class="stroke-white hover:stroke-accent duration-300">
                                     <IconsGitlab :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
 
                             <div class="col-span-1">
-                                <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank" aria-label="Contact Maks via LinkedIn"
-                                    class="fill-white hover:fill-[#F0BF6C] duration-300">
+                                <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
+                                    aria-label="Contact Maks via LinkedIn"
+                                    class="fill-white hover:fill-accent duration-300">
                                     <IconsLinkedIn :size="minLg ? '48' : '64'" />
                                 </NuxtLink>
                             </div>
@@ -65,7 +68,7 @@
                     <div class="flex flex-col md:flex-row gap-3">
                         <div class="md:w-[200px]">
                             <NuxtLink to="/MAKSYM-BUDIUKIN.pdf" external download="MAKSYM-BUDIUKIN.pdf"
-                                class="flex items-center justify-center w-full text-xl font-medium border-[2px] border-transparent bg-[#F0BF6CCC] hover:bg-[#F0BF6C] duration-300 rounded-lg px-4 sm:px-6 py-2">
+                                class="flex items-center justify-center w-full text-xl font-medium border-[2px] border-transparent bg-semiAccent hover:bg-accent duration-300 rounded-lg px-4 sm:px-6 py-2">
                                 Download CV
                             </NuxtLink>
                         </div>
@@ -85,33 +88,34 @@
                     <div class="grid grid-cols-4 lg:grid-cols-1 gap-3 md:px-5 py-5 lg:py-0">
 
                         <div class="hidden lg:flex col-span-1 w-full justify-center">
-                            <div class=" border-[2px] w-[1px] border-[#F0BF6C] h-[192px]"></div>
+                            <div class=" border-[2px] w-[1px] border-accent h-[192px]"></div>
                         </div>
 
                         <div class="col-span-1">
                             <NuxtLink to="https://t.me/bud_maks" target="_blank" aria-label="Contact Maks via Telegram"
-                                class="stroke-white hover:stroke-[#F0BF6C] duration-300">
+                                class="stroke-white hover:stroke-accent duration-300">
                                 <IconsTelegram :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank" aria-label="View Maks' GitHub"
-                                class="fill-white hover:fill-[#F0BF6C] duration-300">
+                            <NuxtLink to="https://github.com/Maks-Budiukin" target="_blank"
+                                aria-label="View Maks' GitHub" class="fill-white hover:fill-accent duration-300">
                                 <IconsGithub :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank" aria-label="View Maks' GitLab"
-                                class="stroke-white hover:stroke-[#F0BF6C] duration-300">
+                            <NuxtLink to="https://gitlab.com/maksym-budyukin" target="_blank"
+                                aria-label="View Maks' GitLab" class="stroke-white hover:stroke-accent duration-300">
                                 <IconsGitlab :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
 
                         <div class="col-span-1">
-                            <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank" aria-label="Contact Maks via LinkedIn"
-                                class="fill-white hover:fill-[#F0BF6C] duration-300">
+                            <NuxtLink to="https://www.linkedin.com/in/maksym-budiukin/" target="_blank"
+                                aria-label="Contact Maks via LinkedIn"
+                                class="fill-white hover:fill-accent duration-300">
                                 <IconsLinkedIn :size="minLg ? '48' : '36'" />
                             </NuxtLink>
                         </div>
@@ -120,7 +124,7 @@
             </div>
 
         </div>
-        <div class="border-[2px] w-[50%] border-[#F0BF6C] h-[1px] ml-[35%]"></div>
+        <div class="border-[2px] w-[50%] border-accent h-[1px] ml-[35%]"></div>
     </section>
 </template>
 

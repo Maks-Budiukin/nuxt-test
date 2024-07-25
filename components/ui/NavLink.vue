@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="link" type="button" class="text-lg sm:text-xl text-nowrap text-white hover:text-[#F0BF6C] duration-300">
+    <NuxtLink :to="link" type="button" class="text-lg sm:text-xl text-nowrap text-white hover:text-accent duration-300">
         <slot />
     </NuxtLink>
 </template>
@@ -13,6 +13,4 @@ const props = defineProps({
 })
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -15,7 +15,7 @@
                         <div
                             class="button-container absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] hidden">
                             <NuxtLink
-                                class="block text-nowrap text-white hover:text-[#F0BF6C] duration-300 text-2xl font-medium py-4 px-6  border-transparent border-[2px] hover:border-y-[#F0BF6C] "
+                                class="block text-nowrap text-white hover:text-accent duration-300 text-2xl font-medium py-4 px-6  border-transparent border-[2px] hover:border-y-accent "
                                 :to="`/${site.id}`">
                                 About
                                 project

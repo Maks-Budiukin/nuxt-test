@@ -25,12 +25,11 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    apiToken: process.env.NUXT_API_TOKEN,
-    botToken: process.env.NUXT_BOT_TOKEN,
-    chatID: process.env.CHAT_ID,
-
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || "/api",
+      apiToken: process.env.NUXT_API_TOKEN,
+      botToken: process.env.NUXT_BOT_TOKEN,
+      chatID: process.env.CHAT_ID,
     },
   },
 });

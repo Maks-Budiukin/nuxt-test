@@ -19,7 +19,7 @@
 
         <template v-if="page === 'project'">
           <UiNavLink :link="'/#portfolio'"
-            class="flex gap-2 fill-[#FFFFFF] hover:text-[#F0BF6C] hover:fill-[#F0BF6C] duration-300">Back
+            class="flex gap-2 fill-[#FFFFFF] hover:text-accent hover:fill-accent duration-300">Back
             <IconsArrowBack />
           </UiNavLink>
         </template>

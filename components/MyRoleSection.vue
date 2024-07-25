@@ -22,7 +22,7 @@
                         <div class="pl-8 ml-4 border-l-[3px]">
                             <div v-for="role in item.role" :key="role.id" class="mb-4">
                                 <div>
-                                    <p class="text-[#F0BF6C] font-semibold">{{ role.roleTitle }}</p>
+                                    <p class="text-accent font-semibold">{{ role.roleTitle }}</p>
                                 </div>
                                 <div>
                                     <p>{{ role.roleDescription }}</p>
