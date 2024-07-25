@@ -5,11 +5,14 @@ const BOT_TOKEN = '7232063214:AAHAUmfSd_e6xP1sufzBt_vKmxFXIIcjFGo'
 const CHAT_ID = '386534559'
 
 export const sendMessage = async (message) => {
+
+  const config = useRuntimeConfig()
+
   try {
-    const { data } = await $fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    const { data } = await $fetch(`https://api.telegram.org/bot${config.botToken}/sendMessage`, {
       method: 'post',
       body: {
-        chat_id: CHAT_ID,
+        chat_id: config.chatID,
         text: message,
         parse_mode: 'HTML'
       },
