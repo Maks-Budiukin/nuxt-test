@@ -14,7 +14,7 @@ const props = defineProps({
         type: String,
         default: '24',
     }
-})
+});
 
 </script>
 

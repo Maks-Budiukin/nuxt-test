@@ -1,23 +1,19 @@
 <template>
   <UiDialogModal v-if="open" :open="open" @close="$emit('close')">
     <template #modal-content>
-      <div class="relative w-full max-h-screen">
+      <div class="w-full max-h-screen relative">
         <UiArrowButton :direction="'left'" shadow @click="onLeft" />
 
         <div class="flex justify-center">
           <Transition :name="transitionName" mode="out-in">
-            <img
-              v-if="currentImage"
-              :key="currentImage"
-              :src="currentImage"
-              alt="screenshot"
-              class="max-h-screen"
-            />
+            <img v-if="currentImage" :key="currentImage" :src="currentImage" alt="screenshot" class="max-h-screen" />
           </Transition>
         </div>
 
         <UiArrowButton shadow @click="onRight" />
-        <button class="color-[#FFFFFF] absolute right-3 top-3 z-[32]">X</button>
+        <div class="absolute right-1 top-1 min-[560px]:right-3 min-[560px]:top-3 z-[32]">
+          <UiCloseButton @click="$emit('close')" />
+        </div>
       </div>
     </template>
   </UiDialogModal>
@@ -67,6 +63,7 @@ const onLeft = () => {
     emit("update:modelValue", props.modelValue - 1);
   }
 };
+
 </script>
 
 <style lang="scss" scoped>
